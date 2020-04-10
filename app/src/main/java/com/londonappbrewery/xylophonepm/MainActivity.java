@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private int mBSoundId;
 
     private SoundPool mSoundPool;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,14 +44,10 @@ public class MainActivity extends AppCompatActivity {
         mASoundId = mSoundPool.load(getApplicationContext(),R.raw.note6_a,1);
         mBSoundId = mSoundPool.load(getApplicationContext(),R.raw.note7_b,1);
     }
-
-
-
     // TODO: Add the play methods triggered by the buttons
 
     public void cPlay(View v){
         mSoundPool.play(mCSoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
-
     }
     public void dPlay(View v){
         mSoundPool.play(mDSoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
@@ -70,8 +67,4 @@ public class MainActivity extends AppCompatActivity {
     public void aPlay(View v){
         mSoundPool.play(mBSoundId,LEFT_VOLUME,RIGHT_VOLUME,PRIORITY,NO_LOOP,NORMAL_PLAY_RATE);
     }
-
-
-
-
 }
